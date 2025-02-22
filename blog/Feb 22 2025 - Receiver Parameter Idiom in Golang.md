@@ -1,23 +1,10 @@
-# Receiver Parameter Idiom in Golang
-
-Author: Hamza Mateen
-Date: 2023-12-10T10:43:53.000Z
-Source: OpenGenus IQ: Learn Algorithms, DL, System Design
-URL: https://iq.opengenus.org/method-receivers-in-go/
-Date saved: 2025-02-22T10:33:42.434Z
-
-> The receiver parameter idiom in Golang is a pattern in which method declaration has a special parameter that enables a type to associate methods that can be called on its instances.
-
----
-
-[](https://amzn.to/3EgiXLM)
-
-[Open-Source Internship opportunity by OpenGenus for programmers. Apply now.](http://internship.opengenus.org/)
-
 I came across this line of code in a GoLang code base today:
 
 ```
-func(us UserStore)GetUsers(w http.ResponseWriter, r *http.Request){// implementation // making use of `us` object/variable}
+func (us UserStore) GetUsers(w http.ResponseWriter, r *http.Request) { 
+    // implementation 
+    // making use of `us` object/variable
+}
 ```
 
 and my honest reaction was ... _humm!_
@@ -37,7 +24,25 @@ The associating of methods to a certain type also introduces **modularity** beca
 _Let's see a short example,_
 
 ```
-package main import"math"// Let's define a struct type Point which represents a 2D point.type Point struct{ x, y float64}// constructs a point and returns it// acts as a constructorfuncNewPoint(x, y float64) Point {return Point{x, y}}func(p *Point)Distance(q Point)float64{ dx := p.x - q.x dy := p.y - q.y return math.Sqrt(dx*dx + dy*dy)}
+package main
+import "math"
+
+// Let's define a struct type Point which represents a 2D point.
+type Point struct {
+    x, y float64 
+}
+
+// constructs a point and returns it
+// acts as a constructor
+func NewPoint(x, y float64) Point {
+    return Point{x, y}  
+}
+
+func (p *Point) Distance(q Point) float64 {
+    dx := p.x - q.x
+    dy := p.y - q.y
+    return math.Sqrt(dx*dx + dy*dy)
+}
 ```
 
 I have defined a `Point` struct and a couple of methods surrounding its usage. The `NewPoint` constructs a new Point object and returns it while the `Distance` method calculates the Euclidian distance between two such points. If we look closely, the later one uses _receiver parameter_ which means we can call this method directly on a `Point` object or a pointer to its object. Choosing between passing an object by value or by reference to a method depends on whether we want to modify the original object or if the object size is relatively larger, making the copy operation an expensive choice.
@@ -45,7 +50,19 @@ I have defined a `Point` struct and a couple of methods surrounding its usage. T
 in the **main** function:
 
 ```
-package main funcmain(){// create a Point without using NewPoint method origin := Point{0,0}// Create instances of the Point type using the constructor p :=NewPoint(1,2) q :=NewPoint(4,6)// Use the Distance method to calculate the distance between points distance := p.Distance(q) fmt.Printf("Distance between points: %f\n", distance)}
+package main
+func main() {
+    // create a Point without using NewPoint method
+    origin := Point{0,0}
+    
+    // Create instances of the Point type using the constructor
+    p := NewPoint(1, 2)
+    q := NewPoint(4, 6)
+
+    // Use the Distance method to calculate the distance between points
+    distance := p.Distance(q)
+    fmt.Printf("Distance between points: %f\n", distance)
+}
 ```
 
 In the main function, we create two points and then calculate the distance between them.
