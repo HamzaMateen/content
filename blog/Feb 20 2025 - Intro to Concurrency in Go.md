@@ -1,3 +1,23 @@
+---
+title: "Understanding Concurrency in Go"
+description: "An introductory guide to Go's concurrency model, covering goroutines, channels, and a real-world concurrency problem."
+date: 2025-07-24
+tags:
+  - go
+  - concurrency
+  - goroutines
+  - channels
+  - parallelism
+  - programming
+draft: false
+author: "Hamza Mateen"
+toc: true
+layout: "blog"
+readingTime: 6 # minutes
+slug: "go-concurrency-model"
+coverImage: "/images/go-concurrency.png"
+---
+
 
 # Table of Contents
 - [Introduction](#introduction)
