@@ -1,3 +1,22 @@
+---
+title: "Ownership and Enums with Pattern Matching"
+excerpt: "An explanation of Rust's ownership system and how enums and pattern matching provide expressive, memory-safe control flow."
+date: 2025-02-21
+tags:
+  - rust
+  - ownership
+  - pattern matching
+  - enums
+  - programming
+author: "Hamza Mateen"
+draft: false
+toc: true
+layout: "blog"
+readingTime: 7
+slug: "ownership-enums-pattern-matching"
+coverImage: "/images/rust-ownership.png"
+---
+
 Ownership Challenge: Swap Values
 Write a function that takes two mutable references and swaps their values.
 

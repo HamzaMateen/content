@@ -1,6 +1,6 @@
 ---
 title: "Understanding Concurrency in Go"
-description: "An introductory guide to Go's concurrency model, covering goroutines, channels, and a real-world concurrency problem."
+excerpt: "An introductory guide to Go's concurrency model, covering goroutines, channels, and a real-world concurrency problem."
 date: 2025-07-24
 tags:
   - go

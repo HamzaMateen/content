@@ -1,3 +1,23 @@
+---
+title: "Canary and Rolling Deployment Strategies Explained"
+excerpt: "Learn the differences between canary and rolling deployment strategies, how they work, and when to use them in production environments."
+date: 2025-02-22
+tags:
+  - devops
+  - deployment
+  - canary
+  - rolling deployments
+  - strategies
+author: "Hamza Mateen"
+draft: false
+toc: true
+layout: "blog"
+readingTime: 6
+slug: "canary-vs-rolling-deployments"
+coverImage: "/images/deployments.png"
+---
+
+
 ## What is a Deployment Strategy?
 
 _Nothing beats the sensation of pushing your code to production._  

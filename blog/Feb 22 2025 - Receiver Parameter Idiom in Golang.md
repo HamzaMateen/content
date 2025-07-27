@@ -1,3 +1,22 @@
+---
+title: "Receiver Parameter Idiom in Golang"
+excerpt: "Exploring method receivers in Go, including value vs. pointer receivers, common idioms, and when to use each for cleaner APIs."
+date: 2025-02-22
+tags:
+  - go
+  - idioms
+  - receiver
+  - methods
+  - pointers
+author: "Hamza Mateen"
+draft: false
+toc: true
+layout: "blog"
+readingTime: 5
+slug: "receiver-parameter-idiom-go"
+coverImage: "/images/go-receivers.png"
+---
+
 I came across this line of code in a GoLang code base today:
 
 ```

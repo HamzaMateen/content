@@ -1,3 +1,22 @@
+---
+title: "Linked List in Golang"
+excerpt: "An implementation-focused guide to building a singly linked list in Go, covering struct definitions, insertion, traversal, and deletion."
+date: 2025-02-22
+tags:
+  - go
+  - data structures
+  - linked list
+  - algorithms
+author: "Hamza Mateen"
+draft: false
+toc: true
+layout: "blog"
+readingTime: 6
+slug: "linked-list-in-golang"
+coverImage: "/images/linked-list.png"
+---
+
+
 ## Table of Contents
 
 -   [Introduction](https://iq.opengenus.org/linked-list-in-golang/#introduction)

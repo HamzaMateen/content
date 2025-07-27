@@ -1,3 +1,22 @@
+---
+title: "Go Interfaces: A Beginner's Guide"
+excerpt: "A simplified guide to understanding interfaces in Go, their purpose, how they enable polymorphism, and how to use them effectively."
+date: 2025-02-22
+tags:
+  - go
+  - interfaces
+  - polymorphism
+  - beginner
+author: "Hamza Mateen"
+draft: false
+toc: true
+layout: "blog"
+readingTime: 5
+slug: "go-interfaces-guide"
+coverImage: "/images/go-interfaces.png"
+---
+
+
 ### Introduction
 
 An interface at its best, is an **interaction point** where two different _systems_ meet in order to interact with each other.  
